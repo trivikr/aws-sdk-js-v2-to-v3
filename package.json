@@ -1,6 +1,6 @@
 {
   "name": "aws-sdk-js-v2-to-v3",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "jscodeshift transform to convert application code using AWS SDK for JavaScript v2 to use v3",
   "keywords": [
     "jscodeshift",
@@ -30,6 +30,7 @@
     "jscodeshift": "0.13.1"
   },
   "devDependencies": {
+    "@changesets/cli": "2.21.0",
     "@tsconfig/node16": "1.0.2",
     "@types/jest": "27.4.1",
     "@types/jscodeshift": "0.11.3",
