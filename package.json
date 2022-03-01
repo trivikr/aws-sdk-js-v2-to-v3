@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepack": "yarn build && yarn test",
+    "release": "yarn build && changeset publish",
     "test": "jest"
   },
   "dependencies": {
