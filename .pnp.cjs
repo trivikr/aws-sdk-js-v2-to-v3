@@ -34,7 +34,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@types/jscodeshift", "npm:0.11.3"],\
-            ["jscodeshift", "virtual:53b494d02d8b64c214188658222ae871cdcac0ebd857c1a62200000a01dbd158d229e29da51ff17caae32d8e4bada0d690f90c8a38974a51eb7a4efc4443d5a2#npm:0.13.1"]\
+            ["jscodeshift", "virtual:53b494d02d8b64c214188658222ae871cdcac0ebd857c1a62200000a01dbd158d229e29da51ff17caae32d8e4bada0d690f90c8a38974a51eb7a4efc4443d5a2#npm:0.13.1"],\
+            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -850,7 +851,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["aws-sdk-js-v2-to-v3", "workspace:."],\
             ["@types/jscodeshift", "npm:0.11.3"],\
-            ["jscodeshift", "virtual:53b494d02d8b64c214188658222ae871cdcac0ebd857c1a62200000a01dbd158d229e29da51ff17caae32d8e4bada0d690f90c8a38974a51eb7a4efc4443d5a2#npm:0.13.1"]\
+            ["jscodeshift", "virtual:53b494d02d8b64c214188658222ae871cdcac0ebd857c1a62200000a01dbd158d229e29da51ff17caae32d8e4bada0d690f90c8a38974a51eb7a4efc4443d5a2#npm:0.13.1"],\
+            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2452,6 +2454,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tslib-npm-2.3.1-0e21e18015-de17a98d46.zip/node_modules/tslib/",\
           "packageDependencies": [\
             ["tslib", "npm:2.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["typescript", [\
+        ["patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367", {\
+          "packageLocation": "./.yarn/cache/typescript-patch-8338853a82-40b493a717.zip/node_modules/typescript/",\
+          "packageDependencies": [\
+            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
           ],\
           "linkType": "HARD"\
         }]\
