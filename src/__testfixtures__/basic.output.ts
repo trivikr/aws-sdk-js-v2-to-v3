@@ -1,3 +1,4 @@
+import AWS from "aws-sdk";
 import { DynamoDB } from "@aws-sdk/client-dynamodb";
 
 const region = "us-west-2";
