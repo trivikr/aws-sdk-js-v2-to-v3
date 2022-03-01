@@ -9,5 +9,5 @@ on:
       - "**.yml"
 
 jobs:
-  call-workflow:
+  call-build:
     uses: ./.github/workflows/build.yml
