@@ -1,12 +1,13 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+    branches: [main]
 
 jobs:
-  release:
+  on-success:
     name: Release
     runs-on: ubuntu-latest
     steps:
