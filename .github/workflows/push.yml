@@ -1,4 +1,4 @@
-name: Release
+name: push
 
 on:
   push:
@@ -8,7 +8,6 @@ jobs:
   call-build:
     uses: ./.github/workflows/build.yml
   release:
-    name: Release
     needs: call-build
     runs-on: ubuntu-latest
     steps:
