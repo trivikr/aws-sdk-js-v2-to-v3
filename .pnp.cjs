@@ -34,6 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@types/jscodeshift", "npm:0.11.3"],\
+            ["@types/node", "npm:16.11.26"],\
             ["jscodeshift", "virtual:53b494d02d8b64c214188658222ae871cdcac0ebd857c1a62200000a01dbd158d229e29da51ff17caae32d8e4bada0d690f90c8a38974a51eb7a4efc4443d5a2#npm:0.13.1"],\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
           ],\
@@ -763,6 +764,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/node", [\
+        ["npm:16.11.26", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.11.26-6163d95b7d-57757caaba.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:16.11.26"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["ansi-styles", [\
         ["npm:3.2.1", {\
           "packageLocation": "./.yarn/cache/ansi-styles-npm-3.2.1-8cb8107983-d85ade01c1.zip/node_modules/ansi-styles/",\
@@ -851,6 +861,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["aws-sdk-js-v2-to-v3", "workspace:."],\
             ["@types/jscodeshift", "npm:0.11.3"],\
+            ["@types/node", "npm:16.11.26"],\
             ["jscodeshift", "virtual:53b494d02d8b64c214188658222ae871cdcac0ebd857c1a62200000a01dbd158d229e29da51ff17caae32d8e4bada0d690f90c8a38974a51eb7a4efc4443d5a2#npm:0.13.1"],\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
           ],\

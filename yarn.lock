@@ -511,6 +511,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:16.11.26":
+  version: 16.11.26
+  resolution: "@types/node@npm:16.11.26"
+  checksum: 57757caaba3f0d95de82198cb276a1002c49b710108c932a1d02d7c91ff2fa57cfe2dd19fde60853b6dd90b0964b3cf35557981d2628e20aed6a909057aedfe6
+  languageName: node
+  linkType: hard
+
 "ansi-styles@npm:^3.2.1":
   version: 3.2.1
   resolution: "ansi-styles@npm:3.2.1"
@@ -587,6 +594,7 @@ __metadata:
   resolution: "aws-sdk-js-v2-to-v3@workspace:."
   dependencies:
     "@types/jscodeshift": 0.11.3
+    "@types/node": 16.11.26
     jscodeshift: 0.13.1
     typescript: 4.6.2
   languageName: unknown
