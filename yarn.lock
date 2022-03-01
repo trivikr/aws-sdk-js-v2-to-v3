@@ -1186,10 +1186,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node16@npm:1.0.2":
+"@tsconfig/node12@npm:1.0.2":
   version: 1.0.2
-  resolution: "@tsconfig/node16@npm:1.0.2"
-  checksum: ca94d3639714672bbfd55f03521d3f56bb6a25479bd425da81faf21f13e1e9d15f40f97377dedbbf477a5841c5b0c8f4cd1b391f33553d750b9202c54c2c07aa
+  resolution: "@tsconfig/node12@npm:1.0.2"
+  checksum: 02fdd65c4b19bedcf953d9bcf94548e36d18cb3390cb0738a34b8916f7cd25f48e1498df2ee4610ae57cd6142f688985dd3ccf5897d6e4a67a294726101b0f39
   languageName: node
   linkType: hard
 
@@ -1611,7 +1611,7 @@ __metadata:
   resolution: "aws-sdk-js-v2-to-v3@workspace:."
   dependencies:
     "@changesets/cli": 2.21.0
-    "@tsconfig/node16": 1.0.2
+    "@tsconfig/node12": 1.0.2
     "@types/jest": 27.4.1
     "@types/jscodeshift": 0.11.3
     "@types/node": 16.11.26
