@@ -23,7 +23,8 @@
     "url": "https://github.com/trivikr/aws-sdk-js-v2-to-v3.git"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest"
   },
   "dependencies": {
     "jscodeshift": "0.13.1"
