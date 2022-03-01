@@ -1,13 +1,14 @@
-name: Release
+name: push
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
+  call-build:
+    uses: ./.github/workflows/build.yml
   release:
-    name: Release
+    needs: call-build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo

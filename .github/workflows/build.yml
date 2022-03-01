@@ -1,18 +1,7 @@
-name: CI
+name: build
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "src/**.{ts,js}"
-      - "**.json"
-      - "**.yml"
-  pull_request:
-    branches: [main]
-    paths:
-      - "src/**.{ts,js}"
-      - "**.json"
-      - "**.yml"
+  workflow_call:
 
 jobs:
   build:
