@@ -5,5 +5,5 @@
     "outDir": "dist",
     "rootDir": "src"
   },
-  "exclude": ["**/__tests__/**", "**/__testfixtures__/**"]
+  "exclude": ["**/dist/**", "**/__tests__/**", "**/__testfixtures__/**"]
 }
