@@ -31,7 +31,8 @@
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
-    "jscodeshift": "0.13.1"
+    "jscodeshift": "0.13.1",
+    "jscodeshift-find-imports": "2.0.4"
   },
   "devDependencies": {
     "@changesets/cli": "2.21.0",
