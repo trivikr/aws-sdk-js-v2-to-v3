@@ -5,14 +5,14 @@ on:
     branches: [main]
     paths:
       - "src/**.{ts,js}"
-      - "*.json"
-      - "*.yml"
+      - "**.json"
+      - "**.yml"
   pull_request:
     branches: [main]
     paths:
       - "src/**.{ts,js}"
-      - "*.json"
-      - "*.yml"
+      - "**.json"
+      - "**.yml"
 
 jobs:
   build:
