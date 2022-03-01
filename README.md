@@ -20,18 +20,18 @@ To use this jscodeshift transform, please install [Node.js][install-nodejs] and 
   ```console
   export TRANSFORM_FILEPATH=/tmp/transform.js
   ```
-- Download tranform from [UNPKG][unpkg] and save it to the filepath:
+- Download transform from [UNPKG][unpkg] and save it to the filepath:
   ```console
   curl -L https://unpkg.com/aws-sdk-js-v2-to-v3 -o $TRANSFORM_FILEPATH
   ```
 
 ## Usage
 
-- Run dry-run for the transform:
+- Optional execute dry-run for the transform:
   ```console
   npx jscodeshift --dry -t $TRANSFORM_FILEPATH PATH...
   ```
-- Run transform if dry-run succeeds:
+- Run transform:
   ```console
   npx jscodeshift -t $TRANSFORM_FILEPATH PATH...
   ```
