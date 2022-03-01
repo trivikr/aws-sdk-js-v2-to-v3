@@ -501,6 +501,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/jscodeshift@npm:0.11.3":
+  version: 0.11.3
+  resolution: "@types/jscodeshift@npm:0.11.3"
+  dependencies:
+    ast-types: ^0.14.1
+    recast: ^0.20.3
+  checksum: 65c43eb5d2eddd623b7a56f578dfa8445d801ab49ffc384f3662e184663cc61288777983b7c1ef5400e68d7dddf7f93b950aac95199eb0ec2f690a25f54d005d
+  languageName: node
+  linkType: hard
+
 "ansi-styles@npm:^3.2.1":
   version: 3.2.1
   resolution: "ansi-styles@npm:3.2.1"
@@ -554,7 +564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ast-types@npm:0.14.2":
+"ast-types@npm:0.14.2, ast-types@npm:^0.14.1":
   version: 0.14.2
   resolution: "ast-types@npm:0.14.2"
   dependencies:
@@ -576,6 +586,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "aws-sdk-js-v2-to-v3@workspace:."
   dependencies:
+    "@types/jscodeshift": 0.11.3
     jscodeshift: 0.13.1
   languageName: unknown
   linkType: soft
@@ -1686,7 +1697,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"recast@npm:^0.20.4":
+"recast@npm:^0.20.3, recast@npm:^0.20.4":
   version: 0.20.5
   resolution: "recast@npm:0.20.5"
   dependencies:
