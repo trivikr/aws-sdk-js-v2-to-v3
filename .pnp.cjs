@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@tsconfig/node16", "npm:1.0.2"],\
             ["@types/jscodeshift", "npm:0.11.3"],\
             ["@types/node", "npm:16.11.26"],\
             ["jscodeshift", "virtual:53b494d02d8b64c214188658222ae871cdcac0ebd857c1a62200000a01dbd158d229e29da51ff17caae32d8e4bada0d690f90c8a38974a51eb7a4efc4443d5a2#npm:0.13.1"],\
@@ -753,6 +754,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@tsconfig/node16", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/@tsconfig-node16-npm-1.0.2-1f43ab567a-ca94d36397.zip/node_modules/@tsconfig/node16/",\
+          "packageDependencies": [\
+            ["@tsconfig/node16", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/jscodeshift", [\
         ["npm:0.11.3", {\
           "packageLocation": "./.yarn/cache/@types-jscodeshift-npm-0.11.3-ebf055059f-65c43eb5d2.zip/node_modules/@types/jscodeshift/",\
@@ -860,6 +870,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["aws-sdk-js-v2-to-v3", "workspace:."],\
+            ["@tsconfig/node16", "npm:1.0.2"],\
             ["@types/jscodeshift", "npm:0.11.3"],\
             ["@types/node", "npm:16.11.26"],\
             ["jscodeshift", "virtual:53b494d02d8b64c214188658222ae871cdcac0ebd857c1a62200000a01dbd158d229e29da51ff17caae32d8e4bada0d690f90c8a38974a51eb7a4efc4443d5a2#npm:0.13.1"],\
