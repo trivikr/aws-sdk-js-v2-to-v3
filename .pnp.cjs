@@ -33,8 +33,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@tsconfig/node16", "npm:1.0.2"],\
             ["@types/jscodeshift", "npm:0.11.3"],\
-            ["jscodeshift", "virtual:53b494d02d8b64c214188658222ae871cdcac0ebd857c1a62200000a01dbd158d229e29da51ff17caae32d8e4bada0d690f90c8a38974a51eb7a4efc4443d5a2#npm:0.13.1"]\
+            ["@types/node", "npm:16.11.26"],\
+            ["jscodeshift", "virtual:53b494d02d8b64c214188658222ae871cdcac0ebd857c1a62200000a01dbd158d229e29da51ff17caae32d8e4bada0d690f90c8a38974a51eb7a4efc4443d5a2#npm:0.13.1"],\
+            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -751,6 +754,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@tsconfig/node16", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/@tsconfig-node16-npm-1.0.2-1f43ab567a-ca94d36397.zip/node_modules/@tsconfig/node16/",\
+          "packageDependencies": [\
+            ["@tsconfig/node16", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/jscodeshift", [\
         ["npm:0.11.3", {\
           "packageLocation": "./.yarn/cache/@types-jscodeshift-npm-0.11.3-ebf055059f-65c43eb5d2.zip/node_modules/@types/jscodeshift/",\
@@ -758,6 +770,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jscodeshift", "npm:0.11.3"],\
             ["ast-types", "npm:0.14.2"],\
             ["recast", "npm:0.20.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/node", [\
+        ["npm:16.11.26", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.11.26-6163d95b7d-57757caaba.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:16.11.26"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -849,8 +870,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["aws-sdk-js-v2-to-v3", "workspace:."],\
+            ["@tsconfig/node16", "npm:1.0.2"],\
             ["@types/jscodeshift", "npm:0.11.3"],\
-            ["jscodeshift", "virtual:53b494d02d8b64c214188658222ae871cdcac0ebd857c1a62200000a01dbd158d229e29da51ff17caae32d8e4bada0d690f90c8a38974a51eb7a4efc4443d5a2#npm:0.13.1"]\
+            ["@types/node", "npm:16.11.26"],\
+            ["jscodeshift", "virtual:53b494d02d8b64c214188658222ae871cdcac0ebd857c1a62200000a01dbd158d229e29da51ff17caae32d8e4bada0d690f90c8a38974a51eb7a4efc4443d5a2#npm:0.13.1"],\
+            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2452,6 +2476,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tslib-npm-2.3.1-0e21e18015-de17a98d46.zip/node_modules/tslib/",\
           "packageDependencies": [\
             ["tslib", "npm:2.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["typescript", [\
+        ["patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367", {\
+          "packageLocation": "./.yarn/cache/typescript-patch-8338853a82-40b493a717.zip/node_modules/typescript/",\
+          "packageDependencies": [\
+            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
           ],\
           "linkType": "HARD"\
         }]\

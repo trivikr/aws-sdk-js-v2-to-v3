@@ -501,6 +501,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tsconfig/node16@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@tsconfig/node16@npm:1.0.2"
+  checksum: ca94d3639714672bbfd55f03521d3f56bb6a25479bd425da81faf21f13e1e9d15f40f97377dedbbf477a5841c5b0c8f4cd1b391f33553d750b9202c54c2c07aa
+  languageName: node
+  linkType: hard
+
 "@types/jscodeshift@npm:0.11.3":
   version: 0.11.3
   resolution: "@types/jscodeshift@npm:0.11.3"
@@ -508,6 +515,13 @@ __metadata:
     ast-types: ^0.14.1
     recast: ^0.20.3
   checksum: 65c43eb5d2eddd623b7a56f578dfa8445d801ab49ffc384f3662e184663cc61288777983b7c1ef5400e68d7dddf7f93b950aac95199eb0ec2f690a25f54d005d
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:16.11.26":
+  version: 16.11.26
+  resolution: "@types/node@npm:16.11.26"
+  checksum: 57757caaba3f0d95de82198cb276a1002c49b710108c932a1d02d7c91ff2fa57cfe2dd19fde60853b6dd90b0964b3cf35557981d2628e20aed6a909057aedfe6
   languageName: node
   linkType: hard
 
@@ -586,8 +600,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "aws-sdk-js-v2-to-v3@workspace:."
   dependencies:
+    "@tsconfig/node16": 1.0.2
     "@types/jscodeshift": 0.11.3
+    "@types/node": 16.11.26
     jscodeshift: 0.13.1
+    typescript: 4.6.2
   languageName: unknown
   linkType: soft
 
@@ -1988,6 +2005,26 @@ __metadata:
   version: 2.3.1
   resolution: "tslib@npm:2.3.1"
   checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
+  languageName: node
+  linkType: hard
+
+"typescript@npm:4.6.2":
+  version: 4.6.2
+  resolution: "typescript@npm:4.6.2"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 8a44ed7e6f6c4cb1ebe8cf236ecda2fb119d84dcf0fbd77e707b2dfea1bbcfc4e366493a143513ce7f57203c75da9d4e20af6fe46de89749366351046be7577c
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@4.6.2#~builtin<compat/typescript>":
+  version: 4.6.2
+  resolution: "typescript@patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 40b493a71747fb89fa70df104e2c4a5e284b43750af5bea024090a5261cefa387f7a9372411b13030f7bf5555cee4275443d08805642ae5c74ef76740854a4c7
   languageName: node
   linkType: hard
 
