@@ -2,11 +2,26 @@
   "name": "aws-sdk-js-v2-to-v3",
   "version": "0.0.1",
   "description": "jscodeshift transform to convert application code using AWS SDK for JavaScript v2 to use v3",
-  "main": "dist/index.js",
-  "repository": "git@github.com:trivikr/aws-sdk-js-v2-to-v3.git",
-  "author": "Kamat, Trivikram <trivikr.dev@gmail.com>",
+  "keywords": [
+    "jscodeshift",
+    "transform",
+    "aws",
+    "sdk",
+    "javascript",
+    "v2",
+    "v3"
+  ],
+  "homepage": "https://github.com/trivikr/aws-sdk-js-v2-to-v3",
   "license": "MIT",
-  "packageManager": "yarn@3.2.0",
+  "author": "Kamat, Trivikram <trivikr.dev@gmail.com>",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trivikr/aws-sdk-js-v2-to-v3.git"
+  },
   "dependencies": {
     "jscodeshift": "0.13.1"
   },
@@ -15,5 +30,9 @@
     "@types/jscodeshift": "0.11.3",
     "@types/node": "16.11.26",
     "typescript": "4.6.2"
-  }
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "packageManager": "yarn@3.2.0"
 }
