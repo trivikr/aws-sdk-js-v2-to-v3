@@ -6,5 +6,6 @@
   "repository": "git@github.com:trivikr/aws-sdk-js-v2-to-v3.git",
   "author": "Kamat, Trivikram <trivikr.dev@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "packageManager": "yarn@3.2.0"
 }
