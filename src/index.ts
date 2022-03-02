@@ -1,38 +1,26 @@
-import { API, FileInfo, Identifier, MemberExpression } from "jscodeshift";
+import { API, FileInfo } from "jscodeshift";
 import findImports from "jscodeshift-find-imports";
 
+import { getV2ClientNames } from "./getV2ClientNames";
 import { getClientName } from "./utils/getClientName";
 import { getClientPackageName } from "./utils/getClientPackageName";
 
 export default function transformer(file: FileInfo, api: API) {
   const j = api.jscodeshift;
   const { statement } = j.template;
-  const root = j(file.source);
+  const source = j(file.source);
 
-  const imports = findImports(root, statement`import AWS from 'aws-sdk'`);
+  const imports = findImports(source, statement`import AWS from 'aws-sdk'`);
   for (const importObj of Object.values(imports)) {
     if (importObj.type === "Identifier") {
-      const v2ClientNames = root
-        .find(j.NewExpression, {
-          callee: {
-            type: "MemberExpression",
-            object: { type: "Identifier", name: importObj.name },
-            property: { type: "Identifier" },
-          },
-        })
-        .nodes()
-        .map(
-          (newExpression) =>
-            ((newExpression.callee as MemberExpression).property as Identifier)
-              .name
-        );
+      const v2ClientNames = getV2ClientNames(j, source, importObj);
 
       for (const v2ClientName of v2ClientNames) {
         const v3ClientName = getClientName(v2ClientName);
         const v3PackageName = getClientPackageName(v2ClientName);
 
         // Add v3 client import.
-        root
+        source
           .find(j.ImportDeclaration)
           .filter((path) => path.value.source.value === "aws-sdk")
           .insertAfter(
@@ -43,7 +31,7 @@ export default function transformer(file: FileInfo, api: API) {
           );
 
         // Replace v2 client creation with v3 client creation.
-        root
+        source
           .find(j.NewExpression, {
             callee: {
               object: { type: "Identifier", name: importObj.name },
@@ -59,5 +47,5 @@ export default function transformer(file: FileInfo, api: API) {
     }
   }
 
-  return root.toSource();
+  return source.toSource();
 }
