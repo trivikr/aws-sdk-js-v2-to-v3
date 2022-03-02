@@ -18,13 +18,12 @@
     "dist"
   ],
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/trivikr/aws-sdk-js-v2-to-v3.git"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "esbuild --bundle src/index.ts --outfile='dist/index.min.js' --platform=node --minify",
     "lint": "eslint 'src/*.ts'",
     "release": "yarn build && changeset publish",
     "test": "jest",
@@ -42,6 +41,7 @@
     "@types/node": "16.11.26",
     "@typescript-eslint/eslint-plugin": "5.13.0",
     "@typescript-eslint/parser": "5.13.0",
+    "esbuild": "0.14.23",
     "eslint": "8.10.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "jest": "27.5.1",
