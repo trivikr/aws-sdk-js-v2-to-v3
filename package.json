@@ -24,7 +24,7 @@
     "url": "https://github.com/trivikr/aws-sdk-js-v2-to-v3.git"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "esbuild --bundle src/index.ts --outfile='dist/index.min.js' --platform=node --minify",
     "lint": "eslint 'src/*.ts'",
     "release": "yarn build && changeset publish",
     "test": "jest",
