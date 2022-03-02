@@ -41,8 +41,19 @@ export default function transformer(file: FileInfo, api: API) {
           );
 
         // Replace v2 client creation with v3 client creation.
-
-        // Replace v2 client API calls with v3 client API calls.
+        root
+          .find(j.NewExpression, {
+            callee: {
+              object: { type: "Identifier", name: importObj.name },
+              property: { type: "Identifier", name: v2ClientName }
+            }
+          })
+          .replaceWith(nodePath => {
+            const { node } = nodePath;
+            // @ts-ignore
+            node.callee = j.identifier(v3ClientName);
+            return node;
+          });
       }
     }
   }
