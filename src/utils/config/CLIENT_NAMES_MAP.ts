@@ -28,5 +28,5 @@ export const CLIENT_NAMES_MAP = {
   SESV2: "SESv2",
   SavingsPlans: "Savingsplans",
   StepFunctions: "SFN",
-  TranscribeService: "Transcribe"
+  TranscribeService: "Transcribe",
 };

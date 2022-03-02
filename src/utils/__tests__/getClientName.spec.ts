@@ -11,7 +11,7 @@ describe(getClientName.name, () => {
 
   it.each(["ImportExport", "MobileAnalytics", "SimpleDB"])(
     "throws for deprecated client '%s'",
-    deprecatedClient => {
+    (deprecatedClient) => {
       expect(() => {
         getClientName(deprecatedClient);
       }).toThrow(
@@ -24,7 +24,7 @@ describe(getClientName.name, () => {
 
   it.each(["UNDEFINED", "NULL", "UNKNOWN"])(
     "throws for unknown client '%s'",
-    unknownClient => {
+    (unknownClient) => {
       expect(() => {
         getClientName(unknownClient);
       }).toThrow(
