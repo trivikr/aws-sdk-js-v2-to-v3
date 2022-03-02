@@ -10,6 +10,7 @@ export const CLIENT_PACKAGE_NAMES_MAP = {
         .replace("-chime-sdk", "-chime-sdk-")
         .replace("-code-", "-code")
         .replace("client-data-", "client-data")
+        .replace("client-io-t", "client-iot-")
     }),
     {}
   ),
@@ -50,12 +51,24 @@ export const CLIENT_PACKAGE_NAMES_MAP = {
   ES: "client-elasticsearch-service",
   EventBridge: "client-eventbridge",
   Finspacedata: "client-finspace-data",
-  ForecastQueryService: "Forecastquery",
-  ForecastService: "Forecast",
-  IVS: "Ivs",
-  IdentityStore: "Identitystore",
-  Iot: "IoT",
-  IotData: "IoTDataPlane",
+  ForecastQueryService: "client-forecastquery",
+  ForecastService: "client-forecast",
+  FraudDetector: "client-frauddetector",
+  GameLift: "client-gamelift",
+  GreengrassV2: "client-greengrassv2",
+  GroundStation: "client-groundstation",
+  GuardDuty: "client-guardduty",
+  HealthLake: "client-healthlake",
+  IdentityStore: "client-identitystore",
+  IoTAnalytics: "client-iotanalytics",
+  IoTFleetHub: "client-iotfleethub",
+  IotData: "client-iot-data-plane",
+  IotDeviceAdvisor: "client-iotdeviceadvisor",
+  IoTSecureTunneling: "client-iotsecuretunneling",
+  IoTSiteWise: "client-iotsitewise",
+  IoTThingsGraph: "client-iotthingsgraph",
+  IoTTwinMaker: "client-iottwinmaker",
+  KafkaConnect: "client-kafkaconnect",
   KinesisVideoSignalingChannels: "KinesisVideoSignaling",
   LexRuntime: "LexRuntimeService",
   MQ: "Mq",
