@@ -36,6 +36,35 @@ To use this jscodeshift transform, please install [Node.js][install-nodejs] and 
   npx jscodeshift -t $TRANSFORM_FILEPATH PATH...
   ```
 
+## Example
+
+```console
+$ cat example.ts
+import AWS from "aws-sdk";
+
+const region = "us-west-2";
+const client = new AWS.DynamoDB({ region });
+client.listTables({}, (err, data) => {
+  if (err) console.log(err, err.stack);
+  else console.log(data);
+});
+
+$ npx jscodeshift --dry -t $TRANSFORM_FILEPATH example.ts
+
+$ cat example.ts
+import AWS from "aws-sdk";
+
+import { DynamoDB } from "@aws-sdk/client-dynamodb";
+
+const region = "us-west-2";
+const client = new DynamoDB({ region });
+client.listTables({}, (err, data) => {
+  if (err) console.log(err, err.stack);
+  else console.log(data);
+});
+
+```
+
 ## License
 
 This library is licensed under the MIT License. See the LICENSE file.
