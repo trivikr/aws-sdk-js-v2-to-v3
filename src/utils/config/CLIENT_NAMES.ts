@@ -295,5 +295,5 @@ export const CLIENT_NAMES = [
   "WorkMailMessageFlow",
   "WorkSpaces",
   "WorkSpacesWeb",
-  "XRay"
+  "XRay",
 ];

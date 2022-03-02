@@ -15,7 +15,7 @@ export const CLIENT_PACKAGE_NAMES_MAP = {
         .replace("client-media-", "client-media")
         .replace("client-route53", "client-route53-")
         .replace("client-sage-maker", "client-sagemaker")
-        .replace("client-work-", "client-work")
+        .replace("client-work-", "client-work"),
     }),
     {}
   ),
@@ -107,5 +107,5 @@ export const CLIENT_PACKAGE_NAMES_MAP = {
   TranscribeService: "client-transcribe",
   WAFRegional: "client-waf-regional",
   WellArchitected: "client-wellarchitected",
-  WorkMailMessageFlow: "client-workmailmessageflow"
+  WorkMailMessageFlow: "client-workmailmessageflow",
 };
