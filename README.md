@@ -50,7 +50,7 @@ client.listTables({}, (err, data) => {
   else console.log(data);
 });
 
-$ npx jscodeshift --dry -t $TRANSFORM_FILEPATH example.ts
+$ npx jscodeshift -t $TRANSFORM_FILEPATH example.ts
 
 $ cat example.ts
 import AWS from "aws-sdk";
