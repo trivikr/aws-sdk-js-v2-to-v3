@@ -53,6 +53,7 @@
   },
   "packageManager": "yarn@3.2.0",
   "lint-staged": {
+    "*.ts": "eslint --fix",
     "*.{ts,json,md}": "prettier --write"
   }
 }
