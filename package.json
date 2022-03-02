@@ -25,6 +25,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "lint": "eslint --fix",
     "release": "yarn build && changeset publish",
     "test": "jest",
     "postinstall": "simple-git-hooks"
