@@ -26,7 +26,8 @@
   "scripts": {
     "build": "tsc",
     "release": "yarn build && changeset publish",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "simple-git-hooks"
   },
   "dependencies": {
     "jscodeshift": "0.13.1"
@@ -38,11 +39,17 @@
     "@types/jscodeshift": "0.11.3",
     "@types/node": "16.11.26",
     "jest": "27.5.1",
+    "lint-staged": "12.3.4",
+    "prettier": "2.5.1",
+    "simple-git-hooks": "2.7.0",
     "ts-jest": "27.1.3",
     "typescript": "4.6.2"
   },
   "engines": {
     "node": ">=16.0.0"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "lint-staged": {
+    "*.{ts,json,md}": "prettier --write"
+  }
 }
