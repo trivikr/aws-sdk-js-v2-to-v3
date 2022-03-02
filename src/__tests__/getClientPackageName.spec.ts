@@ -1,11 +1,11 @@
-import { CLIENT_NAMES_MAP } from "./config";
-import { getClientName } from "./getClientName";
+import { CLIENT_PACKAGE_NAMES_MAP } from "../config";
+import { getClientPackageName } from "../getClientPackageName";
 
-describe(getClientName.name, () => {
-  it.each(Object.entries(CLIENT_NAMES_MAP))(
+describe(getClientPackageName.name, () => {
+  it.each(Object.entries(CLIENT_PACKAGE_NAMES_MAP))(
     "getClientName('%s') === '%s'",
     (input, output) => {
-      expect(getClientName(input)).toBe(output);
+      expect(getClientPackageName(input)).toBe(output);
     }
   );
 
@@ -13,7 +13,7 @@ describe(getClientName.name, () => {
     "throws for deprecated client '%s'",
     deprecatedClient => {
       expect(() => {
-        getClientName(deprecatedClient);
+        getClientPackageName(deprecatedClient);
       }).toThrow(
         new Error(
           `Client '${deprecatedClient}' is either deprecated or newly added.`
@@ -26,7 +26,7 @@ describe(getClientName.name, () => {
     "throws for unknown client '%s'",
     unknownClient => {
       expect(() => {
-        getClientName(unknownClient);
+        getClientPackageName(unknownClient);
       }).toThrow(
         new Error(
           `Client '${unknownClient}' is either deprecated or newly added.`
