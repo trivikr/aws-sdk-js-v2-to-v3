@@ -50,6 +50,6 @@
   },
   "packageManager": "yarn@3.2.0",
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "*.{ts,json,md}": "prettier --write"
   }
 }
