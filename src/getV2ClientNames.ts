@@ -1,9 +1,4 @@
-import {
-  Collection,
-  Identifier,
-  JSCodeshift,
-  MemberExpression,
-} from "jscodeshift";
+import { Collection, Identifier, JSCodeshift, MemberExpression } from "jscodeshift";
 
 export const getV2ClientNames = (
   j: JSCodeshift,
@@ -20,6 +15,5 @@ export const getV2ClientNames = (
     })
     .nodes()
     .map(
-      (newExpression) =>
-        ((newExpression.callee as MemberExpression).property as Identifier).name
+      (newExpression) => ((newExpression.callee as MemberExpression).property as Identifier).name
     );
