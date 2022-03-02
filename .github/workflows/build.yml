@@ -19,6 +19,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: yarn
+      - run: yarn prettier --list-different '**/*.{ts,json,md}'
       - run: yarn build
       - run: yarn lint
       - run: yarn test
