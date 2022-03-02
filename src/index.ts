@@ -1,4 +1,4 @@
-import { API, FileInfo } from "jscodeshift";
+import { FileInfo, API } from "jscodeshift";
 
 export default function transformer(file: FileInfo, api: API) {
   const j = api.jscodeshift;
