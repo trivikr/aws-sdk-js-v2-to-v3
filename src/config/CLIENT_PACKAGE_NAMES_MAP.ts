@@ -96,7 +96,6 @@ export const CLIENT_PACKAGE_NAMES_MAP = {
   SageMakerFeatureStoreRuntime: "client-sagemaker-featurestore-runtime",
   SavingsPlans: "client-savingsplans",
   SecurityHub: "client-securityhub",
-  SESV2: "SESv2",
   ServerlessApplicationRepository: "client-serverlessapplicationrepository",
   ServiceCatalogAppRegistry: "client-service-catalog-appregistry",
   ServiceDiscovery: "client-servicediscovery",
