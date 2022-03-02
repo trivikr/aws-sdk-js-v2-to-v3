@@ -7,7 +7,8 @@ from version 2 (v2) to version 3 (v3).
 
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
-- [Usage](#setup)
+- [Usage](#usage)
+- [Example](#example)
 - [License](#license)
 
 ## Prerequisites
@@ -35,6 +36,35 @@ To use this jscodeshift transform, please install [Node.js][install-nodejs] and 
   ```console
   npx jscodeshift -t $TRANSFORM_FILEPATH PATH...
   ```
+
+## Example
+
+```console
+$ cat example.ts
+import AWS from "aws-sdk";
+
+const region = "us-west-2";
+const client = new AWS.DynamoDB({ region });
+client.listTables({}, (err, data) => {
+  if (err) console.log(err, err.stack);
+  else console.log(data);
+});
+
+$ npx jscodeshift -t $TRANSFORM_FILEPATH example.ts
+
+$ cat example.ts
+import AWS from "aws-sdk";
+
+import { DynamoDB } from "@aws-sdk/client-dynamodb";
+
+const region = "us-west-2";
+const client = new DynamoDB({ region });
+client.listTables({}, (err, data) => {
+  if (err) console.log(err, err.stack);
+  else console.log(data);
+});
+
+```
 
 ## License
 
