@@ -7,7 +7,8 @@ from version 2 (v2) to version 3 (v3).
 
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
-- [Usage](#setup)
+- [Usage](#usage)
+- [Example](#example)
 - [License](#license)
 
 ## Prerequisites
