@@ -1,7 +1,7 @@
 import { API, FileInfo } from "jscodeshift";
 import findImports from "jscodeshift-find-imports";
 
-import { addV3ClientImport, getV2ClientNames } from "./helpers";
+import { addV3ClientImport, getV2ClientNames, replaceClientCreation } from "./helpers";
 import { getClientName, getClientPackageName } from "./utils";
 
 export default function transformer(file: FileInfo, api: API) {
@@ -19,20 +19,7 @@ export default function transformer(file: FileInfo, api: API) {
         const v3PackageName = getClientPackageName(v2ClientName);
 
         addV3ClientImport(j, source, v3ClientName, v3PackageName);
-
-        // Replace v2 client creation with v3 client creation.
-        source
-          .find(j.NewExpression, {
-            callee: {
-              object: { type: "Identifier", name: importObj.name },
-              property: { type: "Identifier", name: v2ClientName },
-            },
-          })
-          .replaceWith((nodePath) => {
-            const { node } = nodePath;
-            node.callee = j.identifier(v3ClientName);
-            return node;
-          });
+        replaceClientCreation(j, source, { importObj, v2ClientName, v3ClientName });
       }
     }
   }
