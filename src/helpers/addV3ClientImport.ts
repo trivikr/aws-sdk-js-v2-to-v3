@@ -1,10 +1,14 @@
 import { Collection, JSCodeshift } from "jscodeshift";
 
+export interface AddV3ClientImportOptions {
+  v3ClientName: string;
+  v3PackageName: string;
+}
+
 export const addV3ClientImport = (
   j: JSCodeshift,
   source: Collection<any>,
-  v3ClientName: string,
-  v3PackageName: string
+  { v3ClientName, v3PackageName }: AddV3ClientImportOptions
 ): void => {
   source
     .find(j.ImportDeclaration)
