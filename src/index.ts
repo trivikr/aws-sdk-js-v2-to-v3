@@ -1,7 +1,7 @@
 import { API, FileInfo, NewExpression } from "jscodeshift";
 import findImports from "jscodeshift-find-imports";
-import { getClientName } from "./getClientName";
-import { getClientPackageName } from "./getClientPackageName";
+import { getClientName } from "./utils/getClientName";
+import { getClientPackageName } from "./utils/getClientPackageName";
 
 export default function transformer(file: FileInfo, api: API) {
   const j = api.jscodeshift;
