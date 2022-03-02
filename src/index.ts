@@ -1,4 +1,4 @@
-import { API, FileInfo, NewExpression } from "jscodeshift";
+import { API, FileInfo, Identifier, MemberExpression } from "jscodeshift";
 import findImports from "jscodeshift-find-imports";
 
 import { getClientName } from "./utils/getClientName";
@@ -15,15 +15,16 @@ export default function transformer(file: FileInfo, api: API) {
       const v2ClientNames = root
         .find(j.NewExpression, {
           callee: {
+            type: "MemberExpression",
             object: { type: "Identifier", name: importObj.name },
-            property: { type: "Identifier" }
-          }
+            property: { type: "Identifier" },
+          },
         })
         .nodes()
         .map(
-          newExpression =>
-            // @ts-ignore
-            newExpression.callee.property.name
+          (newExpression) =>
+            ((newExpression.callee as MemberExpression).property as Identifier)
+              .name
         );
 
       for (const v2ClientName of v2ClientNames) {
@@ -33,7 +34,7 @@ export default function transformer(file: FileInfo, api: API) {
         // Add v3 client import.
         root
           .find(j.ImportDeclaration)
-          .filter(path => path.value.source.value === "aws-sdk")
+          .filter((path) => path.value.source.value === "aws-sdk")
           .insertAfter(
             j.importDeclaration(
               [j.importSpecifier(j.identifier(v3ClientName))],
@@ -46,12 +47,11 @@ export default function transformer(file: FileInfo, api: API) {
           .find(j.NewExpression, {
             callee: {
               object: { type: "Identifier", name: importObj.name },
-              property: { type: "Identifier", name: v2ClientName }
-            }
+              property: { type: "Identifier", name: v2ClientName },
+            },
           })
-          .replaceWith(nodePath => {
+          .replaceWith((nodePath) => {
             const { node } = nodePath;
-            // @ts-ignore
             node.callee = j.identifier(v3ClientName);
             return node;
           });
