@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "eslint --fix 'src/*.ts'",
+    "lint": "eslint 'src/*.ts'",
     "release": "yarn build && changeset publish",
     "test": "jest",
     "postinstall": "simple-git-hooks"
