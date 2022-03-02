@@ -1,2 +1,1 @@
-export * from "./CLIENT_NAMES";
-export * from "./CLIENT_NAME_EXCEPTIONS_MAP";
+export * from "./CLIENT_NAMES_MAP";
