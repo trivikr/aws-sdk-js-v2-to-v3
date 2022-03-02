@@ -298,8 +298,21 @@ describe(getClientName.name, () => {
     ["WorkMailMessageFlow", "WorkMailMessageFlow"],
     ["WorkSpaces", "WorkSpaces"],
     ["WorkSpacesWeb", "WorkSpacesWeb"],
-    ["XRay", "XRay"],
+    ["XRay", "XRay"]
   ])("getClientName('%s') === '%s'", (input, output) => {
     expect(getClientName(input)).toBe(output);
-  })
+  });
+
+  it.each(["ImportExport", "MobileAnalytics", "SimpleDB"])(
+    "throws for deprecated client '%s'",
+    deprecatedClient => {
+      expect(() => {
+        getClientName(deprecatedClient);
+      }).toThrow(
+        new Error(
+          `Client '${deprecatedClient}' is either deprecated or newly added.`
+        )
+      );
+    }
+  );
 });

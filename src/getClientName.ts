@@ -5,5 +5,7 @@ export const getClientName = (clientName: string) => {
   if (clientName in CLIENT_NAME_EXCEPTIONS_MAP)
     return CLIENT_NAME_EXCEPTIONS_MAP[clientName];
   if (CLIENT_NAMES.includes(clientName)) return clientName;
-  throw new Error(`Unknown client name: ${clientName}`);
+  throw new Error(
+    `Client '${clientName}' is either deprecated or newly added.`
+  );
 };
