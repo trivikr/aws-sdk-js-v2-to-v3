@@ -14,6 +14,8 @@ export const CLIENT_PACKAGE_NAMES_MAP = {
         .replace("client-lookout-", "client-lookout")
         .replace("client-media-", "client-media")
         .replace("client-route53", "client-route53-")
+        .replace("client-sage-maker", "client-sagemaker")
+        .replace("client-work-", "client-work")
     }),
     {}
   ),
@@ -90,8 +92,21 @@ export const CLIENT_PACKAGE_NAMES_MAP = {
   Route53: "client-route-53",
   Route53Domains: "client-route-53-domains",
   Route53Resolver: "client-route53resolver",
+  S3Control: "client-s3-control",
+  SageMakerFeatureStoreRuntime: "client-sagemaker-featurestore-runtime",
+  SavingsPlans: "client-savingsplans",
+  SecurityHub: "client-securityhub",
   SESV2: "SESv2",
-  SavingsPlans: "Savingsplans",
-  StepFunctions: "SFN",
-  TranscribeService: "Transcribe"
+  ServerlessApplicationRepository: "client-serverlessapplicationrepository",
+  ServiceCatalogAppRegistry: "client-service-catalog-appregistry",
+  ServiceDiscovery: "client-servicediscovery",
+  SSMContacts: "client-ssm-contacts",
+  SSMIncidents: "client-ssm-incidents",
+  SSOAdmin: "client-sso-admin",
+  SSOOIDC: "client-sso-oidc",
+  StepFunctions: "client-sfn",
+  TranscribeService: "client-transcribe",
+  WAFRegional: "client-waf-regional",
+  WellArchitected: "client-wellarchitected",
+  WorkMailMessageFlow: "client-workmailmessageflow"
 };
