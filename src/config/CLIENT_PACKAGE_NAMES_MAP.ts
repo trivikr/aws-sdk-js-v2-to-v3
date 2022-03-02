@@ -5,12 +5,15 @@ export const CLIENT_PACKAGE_NAMES_MAP = {
     (acc, name) => ({
       ...acc,
       [name]: `client-${name.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase()}`
-        .replace("-amplify-", "-amplify")
-        .replace("-cloud-", "-cloud")
         .replace("-chime-sdk", "-chime-sdk-")
-        .replace("-code-", "-code")
+        .replace("client-amplify-", "client-amplify")
+        .replace("client-cloud-", "client-cloud")
+        .replace("client-code-", "client-code")
         .replace("client-data-", "client-data")
         .replace("client-io-t", "client-iot-")
+        .replace("client-lookout-", "client-lookout")
+        .replace("client-media-", "client-media")
+        .replace("client-route53", "client-route53-")
     }),
     {}
   ),
@@ -69,10 +72,24 @@ export const CLIENT_PACKAGE_NAMES_MAP = {
   IoTThingsGraph: "client-iotthingsgraph",
   IoTTwinMaker: "client-iottwinmaker",
   KafkaConnect: "client-kafkaconnect",
-  KinesisVideoSignalingChannels: "KinesisVideoSignaling",
-  LexRuntime: "LexRuntimeService",
-  MQ: "Mq",
-  RDSDataService: "RDSData",
+  KinesisVideoSignalingChannels: "client-kinesis-video-signaling",
+  LakeFormation: "client-lakeformation",
+  LexRuntime: "client-lex-runtime-service",
+  ManagedBlockchain: "client-managedblockchain",
+  MigrationHubConfig: "client-migrationhub-config",
+  MigrationHubStrategy: "client-migrationhubstrategy",
+  NetworkManager: "client-networkmanager",
+  OpenSearch: "client-opensearch",
+  OpsWorks: "client-opsworks",
+  OpsWorksCM: "client-opsworkscm",
+  PinpointSMSVoice: "client-pinpoint-sms-voice",
+  QLDBSession: "client-qldb-session",
+  QuickSight: "client-quicksight",
+  RDSDataService: "client-rds-data",
+  RoboMaker: "client-robomaker",
+  Route53: "client-route-53",
+  Route53Domains: "client-route-53-domains",
+  Route53Resolver: "client-route53resolver",
   SESV2: "SESv2",
   SavingsPlans: "Savingsplans",
   StepFunctions: "SFN",
