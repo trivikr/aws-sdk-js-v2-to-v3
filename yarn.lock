@@ -1826,6 +1826,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 5.13.0
     "@typescript-eslint/parser": 5.13.0
     eslint: 8.10.0
+    eslint-plugin-simple-import-sort: 7.0.0
     jest: 27.5.1
     jscodeshift: 0.13.1
     lint-staged: 12.3.4
@@ -2830,6 +2831,15 @@ __metadata:
     escodegen: bin/escodegen.js
     esgenerate: bin/esgenerate.js
   checksum: 5aa6b2966fafe0545e4e77936300cc94ad57cfe4dc4ebff9950492eaba83eef634503f12d7e3cbd644ecc1bab388ad0e92b06fd32222c9281a75d1cf02ec6cef
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-simple-import-sort@npm:7.0.0":
+  version: 7.0.0
+  resolution: "eslint-plugin-simple-import-sort@npm:7.0.0"
+  peerDependencies:
+    eslint: ">=5.0.0"
+  checksum: 6aacb7179c213cd2081950630368d1f3b1dcb4f5674d8b989fe7839e7b317ee521d74761676e8b1a7cab49f20405dbcc9aac05358ae804e6bcba6cbf1daccb3d
   languageName: node
   linkType: hard
 
