@@ -6,11 +6,14 @@ describe(getClientName.name, () => {
     expect(getClientName(input)).toBe(output);
   });
 
-  it.each(["ImportExport", "MobileAnalytics", "SimpleDB"])("throws for deprecated client '%s'", (deprecatedClient) => {
-    expect(() => {
-      getClientName(deprecatedClient);
-    }).toThrow(new Error(`Client '${deprecatedClient}' is either deprecated or newly added.`));
-  });
+  it.each(["ImportExport", "MobileAnalytics", "SimpleDB"])(
+    "throws for deprecated client '%s'",
+    (deprecatedClient) => {
+      expect(() => {
+        getClientName(deprecatedClient);
+      }).toThrow(new Error(`Client '${deprecatedClient}' is either deprecated or newly added.`));
+    }
+  );
 
   it.each(["UNDEFINED", "NULL", "UNKNOWN"])("throws for unknown client '%s'", (unknownClient) => {
     expect(() => {
