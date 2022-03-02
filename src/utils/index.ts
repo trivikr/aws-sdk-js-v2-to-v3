@@ -1,2 +1,2 @@
-export * from "./getClientPackageName";
 export * from "./getV3ClientName";
+export * from "./getV3ClientPackageName";
