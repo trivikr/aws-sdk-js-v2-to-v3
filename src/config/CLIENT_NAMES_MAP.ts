@@ -1,4 +1,7 @@
-export const CLIENT_NAME_EXCEPTIONS_MAP = {
+import { CLIENT_NAMES } from "./CLIENT_NAMES";
+
+export const CLIENT_NAMES_MAP = {
+  ...CLIENT_NAMES.reduce((acc, name) => ({ ...acc, [name]: name }), {}),
   AugmentedAIRuntime: "SageMakerA2IRuntime",
   CUR: "CostAndUsageReportService",
   CodeArtifact: "Codeartifact",
