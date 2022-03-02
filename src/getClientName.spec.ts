@@ -315,4 +315,17 @@ describe(getClientName.name, () => {
       );
     }
   );
+
+  it.each(["UNDEFINED", "NULL", "UNKNOWN"])(
+    "throws for unknown client '%s'",
+    unknownClient => {
+      expect(() => {
+        getClientName(unknownClient);
+      }).toThrow(
+        new Error(
+          `Client '${unknownClient}' is either deprecated or newly added.`
+        )
+      );
+    }
+  );
 });
