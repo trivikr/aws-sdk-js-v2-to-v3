@@ -1,7 +1,7 @@
 import { API, FileInfo } from "jscodeshift";
 import findImports from "jscodeshift-find-imports";
 
-import { getV2ClientNames } from "./helpers";
+import { addV3ClientImport, getV2ClientNames } from "./helpers";
 import { getClientName, getClientPackageName } from "./utils";
 
 export default function transformer(file: FileInfo, api: API) {
@@ -18,16 +18,7 @@ export default function transformer(file: FileInfo, api: API) {
         const v3ClientName = getClientName(v2ClientName);
         const v3PackageName = getClientPackageName(v2ClientName);
 
-        // Add v3 client import.
-        source
-          .find(j.ImportDeclaration)
-          .filter((path) => path.value.source.value === "aws-sdk")
-          .insertAfter(
-            j.importDeclaration(
-              [j.importSpecifier(j.identifier(v3ClientName))],
-              j.stringLiteral(v3PackageName)
-            )
-          );
+        addV3ClientImport(j, source, v3ClientName, v3PackageName);
 
         // Replace v2 client creation with v3 client creation.
         source
