@@ -1,5 +1,11 @@
 # aws-sdk-js-v2-to-v3
 
+## 0.1.1
+
+### Patch Changes
+
+- 6b5086b: Replace tsc with esbuild to create single file in dist/index.js
+
 ## 0.1.0
 
 ### Minor Changes
