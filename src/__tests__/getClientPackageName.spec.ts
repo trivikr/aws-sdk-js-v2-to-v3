@@ -5,7 +5,7 @@ describe(getClientPackageName.name, () => {
   it.each(Object.entries(CLIENT_PACKAGE_NAMES_MAP))(
     "getClientName('%s') === '%s'",
     (input, output) => {
-      expect(getClientPackageName(input)).toBe(output);
+      expect(getClientPackageName(input)).toBe(`@aws-sdk/${output}`);
     }
   );
 
