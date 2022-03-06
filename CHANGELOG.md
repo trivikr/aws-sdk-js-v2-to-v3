@@ -1,5 +1,11 @@
 # aws-sdk-js-v2-to-v3
 
+## 0.1.2
+
+### Patch Changes
+
+- d7c1fac: Update README to share link to aws-sdk-js-codemod
+
 ## 0.1.1
 
 ### Patch Changes
