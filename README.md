@@ -1,6 +1,6 @@
 # aws-sdk-js-v2-to-v3
 
-> Replaced by [aws-sdk-js-codemod](https://github.com/trivikr/aws-sdk-js-codemod)
+> This project is merged into [aws-sdk-js-codemod](https://github.com/trivikr/aws-sdk-js-codemod)
 
 jscodeshift transform to migrate AWS SDK for JavaScript in a Javascript/TypeScript codebase
 from version 2 (v2) to version 3 (v3).
